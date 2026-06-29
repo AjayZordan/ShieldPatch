@@ -1,0 +1,66 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - thanks
+  - ask_phishing
+  - ask_ransomware
+  - ask_malware
+  - ask_ddos
+  - ask_password_safety
+  - ask_cybercrime_reporting
+  - ask_shieldpatch       # 🆕 new intent
+  - nlu_fallback
+
+actions:
+  - action_chatgpt_fallback
+
+responses:
+  utter_greet:
+    - text: "Hello! 👋 I’m SentiVor, your cybersecurity assistant. How can I help you today?"
+
+  utter_goodbye:
+    - text: "Goodbye! Stay safe online 🔐"
+
+  utter_thanks:
+    - text: "You're welcome! 😊 Always happy to help."
+
+  utter_ask_phishing:
+    - text: "Phishing is a cyberattack where attackers trick people into sharing personal info through fake emails or websites."
+
+  utter_ask_ransomware:
+    - text: "Ransomware locks your files and demands a payment to unlock them. Never pay the ransom—report it instead!"
+
+  utter_ask_malware:
+    - text: "Malware is malicious software designed to harm, steal data, or take control of your system."
+
+  utter_ask_ddos:
+    - text: "A DDoS attack floods a website or server with traffic, making it slow or crash."
+
+  utter_ask_password_safety:
+    - text: "Use strong passwords — mix letters, numbers, and symbols. Avoid reusing passwords!"
+
+  utter_ask_cybercrime_reporting:
+    - text: "You can report cybercrimes at the official government portal: https://cybercrime.gov.in"
+
+  utter_ask_shieldpatch:       # 🆕 new response
+    - text: |
+        🔰 ShieldPatch is an AI-driven cybersecurity platform designed to identify, analyze, and mitigate digital threats in real time.
+        It integrates live threat intelligence feeds, anomaly detection, and automated response mechanisms to strengthen system defenses.
+        The project combines Rasa-based conversational intelligence (SentiVor chatbot) with advanced backend modules for threat awareness and user guidance.
+        In simple terms — ShieldPatch helps users understand, detect, and defend against cyber threats through intelligent automation and education.
+
+  utter_fallback:
+    - text: "Let me think about that for a second... 🤔"
+
+slots:
+  last_topic:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

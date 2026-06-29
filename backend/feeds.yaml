@@ -1,0 +1,12 @@
+feeds:
+  - name: NVD Recent (example, requires NVD API or feed)
+    url: "https://nvd.nist.gov/feeds/json/cve/1.1/nvdcve-1.1-recent.json.gz"
+    type: "json"
+  - name: Abuse.ch URLhaus (rss)
+    url: "https://urlhaus.abuse.ch/rss/"
+    type: "rss"
+  - name: MalwareBazaar (example)
+    url: "https://mb-api.abuse.ch/api/v1/"   # JSON endpoints vary; parsing logic is generic
+    type: "json"
+
+    

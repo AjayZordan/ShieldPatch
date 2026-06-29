@@ -1,0 +1,76 @@
+version: "3.1"
+nlu:
+  - intent: greet
+    examples: |
+      - hi
+      - hello
+      - hey
+      - good morning
+      - good evening
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you later
+      - catch you soon
+
+  - intent: thanks
+    examples: |
+      - thank you
+      - thanks
+      - appreciate it
+
+  - intent: ask_phishing
+    examples: |
+      - what is phishing
+      - tell me about phishing
+      - explain phishing
+      - how does phishing work
+
+  - intent: ask_ransomware
+    examples: |
+      - what is ransomware
+      - explain ransomware
+      - ransomware attack meaning
+      - how ransomware works
+
+  - intent: ask_malware
+    examples: |
+      - what is malware
+      - explain malware
+      - what are malware attacks
+
+  - intent: ask_ddos
+    examples: |
+      - what is ddos
+      - what is a ddos attack
+      - explain ddos
+      - meaning of ddos attack
+
+  - intent: ask_password_safety
+    examples: |
+      - how to make a strong password
+      - password safety tips
+      - how to secure my password
+
+  - intent: ask_cybercrime_reporting
+    examples: |
+      - how can I report cybercrime
+      - where to report cybercrime
+      - how to file a complaint for online fraud
+
+  - intent: nlu_fallback
+    examples: |
+      - I didn't get that
+      - I don't understand
+      - Can you repeat that?
+
+  - intent: ask_shieldpatch
+    examples: |
+      - what is shieldpatch
+      - tell me about the project shieldpatch
+      - what is the shieldpatch project
+      - describe the shieldpatch project
+      - explain my project shieldpatch
+      - can you tell me about shieldpatch

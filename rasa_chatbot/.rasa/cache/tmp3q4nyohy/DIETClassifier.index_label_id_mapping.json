@@ -1,0 +1,13 @@
+{
+  "0": "ask_cybercrime_reporting",
+  "1": "ask_ddos",
+  "2": "ask_malware",
+  "3": "ask_password_safety",
+  "4": "ask_phishing",
+  "5": "ask_ransomware",
+  "6": "ask_shieldpatch",
+  "7": "goodbye",
+  "8": "greet",
+  "9": "nlu_fallback",
+  "10": "thanks"
+}

@@ -1,0 +1,23 @@
+backend:
+  base_url: "http://127.0.0.1:5000"
+  scan_endpoint: "/api/scan/file"
+  heartbeat_endpoint: "/api/health"
+
+agent:
+  watch_dirs:
+    - "/Users/ajaykumar/Desktop"
+  poll_interval_seconds: 30
+  upload_retries: 3
+  upload_backoff_seconds: 2
+  max_file_size: 209715200
+  user_agent: "ShieldPatchAgent/1.0"
+
+logging:
+  level: "INFO"
+  logfile: "shield_agent.log"
+
+# NVD / feed settings (optional) - put real NVD_API_KEY in your environment or here (not recommended)
+nvd:
+  nvd_api_key: null
+  # recent feed (gz) — you can change to nvdcve-1.1-recent.json.gz or the 1.1 JSON you prefer
+  nvd_feed_url: "https://nvd.nist.gov/feeds/json/cve/1.1/nvdcve-1.1-recent.json.gz"

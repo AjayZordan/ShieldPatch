@@ -1,0 +1,4 @@
+{ "items": [
+  {"description":"Buffer overflow in parser","cvss_score":8.8,"references_count":2,"weaknesses_count":1,"os_count":1,"severity":"CRITICAL","years_since_published":0.05},
+  {"description":"Verbose error info leak","cvss_score":4.0,"references_count":1,"weaknesses_count":0,"os_count":0,"severity":"LOW","years_since_published":1.2}
+]}

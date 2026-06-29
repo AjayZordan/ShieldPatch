@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* smooth theme transitions */
+  transition: background 180ms ease, color 180ms ease;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* === THEME VARIABLES === */
+
+/* default (dark) */
+:root {
+  --bg: #081020;
+  --surface: #0f1724;
+  --panel: rgba(255,255,255,0.03);
+  --text: #e6eef8;
+  --muted: #9fb3c8;
+  --accent: #00d4ff;
+  --danger: #ff4d4d;
+  --success: #4caf50;
+  --card-shadow: 0 12px 30px rgba(2,6,23,0.6);
+}
+
+/* light theme override */
+[data-theme="light"] {
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --panel: rgba(2,6,23,0.02);
+  --text: #071426;
+  --muted: #5a6b78;
+  --accent: #0068d1;
+  --danger: #c0392b;
+  --success: #2e7d32;
+  --card-shadow: 0 8px 20px rgba(20,30,50,0.06);
+}
+
+/* apply variables to main elements */
+body, .dashboard-container, .app-root {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* panels and cards */
+.scanner-section, .threats-panel, .stat-card, .activity-section {
+  background: var(--surface);
+  box-shadow: var(--card-shadow);
+  color: var(--text);
+}
+
+/* accent buttons */
+button, .patch-btn, .scan-btn {
+  color: #fff;
+  background: var(--accent);
+}
+
+/* severity tag */
+.severity-tag {
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 6px;
+}

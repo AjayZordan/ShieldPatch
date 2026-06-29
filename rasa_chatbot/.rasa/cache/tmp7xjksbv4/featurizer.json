@@ -1,0 +1,58 @@
+{
+  "type": "MaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "ask_cybercrime_reporting": 0,
+        "ask_ddos": 1,
+        "ask_malware": 2,
+        "ask_password_safety": 3,
+        "ask_phishing": 4,
+        "ask_ransomware": 5,
+        "ask_shieldpatch": 6,
+        "back": 7,
+        "goodbye": 8,
+        "greet": 9,
+        "nlu_fallback": 10,
+        "out_of_scope": 11,
+        "restart": 12,
+        "session_start": 13,
+        "thanks": 14
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_chatgpt_fallback": 13,
+        "utter_ask_cybercrime_reporting": 14,
+        "utter_ask_ddos": 15,
+        "utter_ask_malware": 16,
+        "utter_ask_password_safety": 17,
+        "utter_ask_phishing": 18,
+        "utter_ask_ransomware": 19,
+        "utter_ask_shieldpatch": 20,
+        "utter_fallback": 21,
+        "utter_goodbye": 22,
+        "utter_greet": 23,
+        "utter_thanks": 24
+      },
+      "entities": {},
+      "slots": {},
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

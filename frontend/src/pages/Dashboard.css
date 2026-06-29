@@ -1,0 +1,360 @@
+/* 🌌 Dashboard Global - theme-aware using CSS variables */
+.dashboard-container {
+  /* use theme variables so navbar/theme switch updates this page */
+  background: var(--bg, radial-gradient(circle at top, #0f172a, #020617));
+  min-height: 100vh;
+  color: var(--text, white);
+  font-family: "Poppins", sans-serif;
+  padding: 30px 20px;
+  overflow-x: hidden;
+}
+
+/* 🧭 Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.dashboard-title {
+  color: var(--accent, #00d4ff);
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.header-info {
+  text-align: right;
+}
+
+/* fall back muted text color to --muted */
+.header-info p {
+  color: var(--muted, #ccc);
+  font-size: 14px;
+}
+
+.logout-btn {
+  background: transparent;
+  color: var(--accent, #00d4ff);
+  border: 1px solid var(--accent, #00d4ff);
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin-top: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: var(--accent, #00d4ff);
+  color: var(--text, #000);
+}
+
+/* 📊 Stats Section */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 0 30px;
+}
+
+.stat-card {
+  background: var(--surface, rgba(255, 255, 255, 0.05));
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: var(--card-shadow, 0 0 15px rgba(0, 238, 255, 0.25));
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 238, 255, 0.7);
+}
+
+.stat-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: var(--text, #fff);
+}
+
+.stat-value {
+  font-size: 38px;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.stat-desc {
+  color: var(--muted, #bbb);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* 🧠 Vulnerability Scanner */
+.scanner-toggle {
+  background: var(--accent, #00eaff);
+  color: var(--text-on-accent, #000);
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.scanner-toggle:hover {
+  filter: brightness(0.95);
+}
+
+.scanner-section {
+  margin-top: 30px;
+  background: var(--surface, rgba(255, 255, 255, 0.05));
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: var(--card-shadow, 0 0 20px rgba(0, 238, 255, 0.3));
+  animation: fadeIn 0.6s ease;
+}
+
+/* 🔍 Scan Buttons */
+.scan-btn,
+.upload-btn {
+  background: var(--accent, #00eaff);
+  color: var(--accent-text, #000);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  margin: 10px;
+}
+
+.scan-btn:hover {
+  filter: brightness(0.94);
+}
+
+.upload-btn {
+  background: var(--warning, #ffd700);
+  color: var(--text-on-warning, #000);
+}
+
+.upload-btn:hover {
+  filter: brightness(0.95);
+}
+
+/* 📈 Progress Bar */
+.progress-container {
+  width: 60%;
+  margin: 20px auto;
+  height: 10px;
+  background: rgba(0,0,0,0.12);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--accent, #00eaff);
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  color: var(--accent, #00eaff);
+  margin-top: 10px;
+}
+
+/* 📋 Vulnerability Table */
+.scan-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text, white);
+  margin-top: 25px;
+}
+
+.scan-table thead {
+  background: rgba(0,0,0,0.35);
+  color: var(--accent, #00eaff);
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.scan-table th,
+.scan-table td {
+  padding: 12px;
+  text-align: center;
+}
+
+.scan-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.severity-tag {
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: var(--text-on-severity, #fff);
+  font-weight: bold;
+}
+
+.patch-btn {
+  background: var(--accent, #00eaff);
+  border: none;
+  color: var(--accent-text, #000);
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.patch-btn:hover {
+  filter: brightness(0.94);
+}
+
+/* 🕵️ Activity Section */
+.activity-section {
+  margin-top: 80px;
+  background: var(--surface, rgba(255, 255, 255, 0.05));
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: var(--card-shadow, 0 0 20px rgba(0, 238, 255, 0.15));
+}
+
+.activity-section h2 {
+  color: var(--accent, #00d4ff);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.activity-section ul {
+  list-style: none;
+  padding: 0;
+  color: var(--muted, #ccc);
+}
+
+.activity-section li {
+  margin: 10px 0;
+  padding-left: 5px;
+  border-left: 3px solid var(--accent, #00d4ff);
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🌐 Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .progress-container {
+    width: 90%;
+  }
+
+  .activity-section {
+    width: 95%;
+  }
+}
+
+/* src/components/ThreatsWidget.css - (kept as part of this file) */
+.tp-modal-content {
+  padding: 16px;
+  max-width: 1000px;
+  max-height: 80vh;
+  overflow: auto;
+  color: var(--text, #eaeaea);
+  background: linear-gradient(180deg, var(--surface, #0f1720), #0b1220);
+  border-radius: 10px;
+  box-shadow: var(--card-shadow, 0 10px 50px rgba(0,0,0,0.6));
+}
+
+.tp-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.tp-close-btn {
+  background: var(--danger, #ff5252);
+  color: var(--text, white);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.tp-close-btn.small { padding: 6px 8px; font-size: 0.9rem; }
+
+.tp-sections { display: grid; grid-template-columns: 1fr; gap: 14px; }
+@media(min-width: 900px){ .tp-sections { grid-template-columns: 1fr 1fr; } }
+
+.tp-section { background: rgba(255,255,255,0.02); padding: 12px; border-radius: 8px; }
+
+.tp-list { list-style: none; padding: 0; margin: 0; }
+.tp-item { display:flex; justify-content:space-between; gap: 12px; padding: 8px 6px; border-bottom: 1px solid rgba(255,255,255,0.03); }
+.tp-item-left { max-width: 60%; }
+.tp-source { font-weight: 600; color: var(--accent, #00d4ff); font-size: 0.95rem; }
+.tp-ioc a { color: #ffd; text-decoration: underline; word-break: break-all; }
+.tp-desc { font-size: 0.92rem; color: var(--muted, #ccc); }
+.tp-meta { font-size: 0.8rem; color: #999; margin-top: 6px; }
+
+.tp-table { width:100%; border-collapse: collapse; color:var(--text, #eee); font-size: 0.95rem; }
+.tp-table th, .tp-table td { padding: 8px 6px; border-bottom: 1px solid rgba(255,255,255,0.03); text-align: left; }
+.tp-loading, .tp-empty { color: var(--muted, #bbb); padding: 8px; }
+
+.tp-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(2,6,23,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 24px;
+}
+
+.tp-modal { width: 100%; max-width: 1100px; }
+
+/* Small utility */
+.tp-refresh-btn {
+  background: var(--accent, #00d4ff);
+  color: var(--accent-text, #001);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tp-error { color: var(--danger, #ff9a9a); margin-bottom: 8px; }
+
+/* add to Dashboard.css */
+.scanner-toggle.threats-toggle {
+  background: linear-gradient(180deg, rgba(7,37,58,1), rgba(11,47,69,1));
+  color: var(--text, #dff6ff);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 10px 16px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(3,10,14,0.6);
+}
+.scanner-toggle.threats-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(3,10,14,0.7);
+}

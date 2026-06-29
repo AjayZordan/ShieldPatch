@@ -1,0 +1,158 @@
+{
+  "file": "/Users/ajaykumar/Desktop/ShieldPatch/ML_MODEL_DEV/data/ml_dataset_cleaned_fast.csv",
+  "shape": [
+    2428,
+    13
+  ],
+  "head": [
+    {
+      "cve_id": "CVE-2005-10004",
+      "published": "2025-08-30 14:15:32.040",
+      "years_since_published": 0.24,
+      "cvss_score": 8.7,
+      "severity": "HIGH",
+      "references_count": 6,
+      "weaknesses_count": 1,
+      "has_windows": 0,
+      "has_linux": 0,
+      "has_android": 0,
+      "os_count": 0,
+      "description_text": "cacti versions contain remote command execution vulnerability graph view php script authenticated user can inject arbitrary shell commands via graph start get parameter improperly handled during graph rendering flaw allows attackers execute commands underlying operating system privileges web server process potentially compromising system integrity",
+      "risk_score": 87.0
+    },
+    {
+      "cve_id": "CVE-2008-20001",
+      "published": "2025-08-30 14:15:33.533",
+      "years_since_published": 0.24,
+      "cvss_score": 7.5,
+      "severity": "HIGH",
+      "references_count": 6,
+      "weaknesses_count": 1,
+      "has_windows": 1,
+      "has_linux": 0,
+      "has_android": 0,
+      "os_count": 1,
+      "description_text": "activepdf webgrabber contains stack based buffer overflow vulnerability getstatus method apwebgrb ocx activex control passing overly long string method remote attacker can execute arbitrary code context vulnerable process although control not marked safe scripting exploitation possible via crafted html content internet explorer under permissive security settings",
+      "risk_score": 75.0
+    },
+    {
+      "cve_id": "CVE-2009-20008",
+      "published": "2025-08-30 14:15:33.840",
+      "years_since_published": 0.24,
+      "cvss_score": 8.6,
+      "severity": "HIGH",
+      "references_count": 6,
+      "weaknesses_count": 1,
+      "has_windows": 1,
+      "has_linux": 0,
+      "has_android": 0,
+      "os_count": 1,
+      "description_text": "green dam youth escort vulnerable stack based buffer overflow when processing overly long urls flaw resides url filtering component fails properly validate input length before copying user supplied data into fixed size buffer remote attacker can exploit vulnerability enticing user visit specially crafted webpage containing long url resulting arbitrary code execution",
+      "risk_score": 86.0
+    }
+  ],
+  "missing_required_columns": [],
+  "duplicate_all_count": 0,
+  "duplicate_cve_id_count": 0,
+  "missing_values": {
+    "cve_id": 0,
+    "published": 1314,
+    "years_since_published": 0,
+    "cvss_score": 0,
+    "severity": 0,
+    "references_count": 0,
+    "weaknesses_count": 0,
+    "has_windows": 0,
+    "has_linux": 0,
+    "has_android": 0,
+    "os_count": 0,
+    "description_text": 0,
+    "risk_score": 0
+  },
+  "numeric_checks": {
+    "years_since_published": {
+      "dtype": "float64",
+      "non_numeric_count": 0
+    },
+    "cvss_score": {
+      "dtype": "float64",
+      "non_numeric_count": 0
+    },
+    "references_count": {
+      "dtype": "int64",
+      "non_numeric_count": 0
+    },
+    "weaknesses_count": {
+      "dtype": "int64",
+      "non_numeric_count": 0
+    },
+    "has_windows": {
+      "dtype": "int64",
+      "non_numeric_count": 0
+    },
+    "has_linux": {
+      "dtype": "int64",
+      "non_numeric_count": 0
+    },
+    "has_android": {
+      "dtype": "int64",
+      "non_numeric_count": 0
+    },
+    "os_count": {
+      "dtype": "int64",
+      "non_numeric_count": 0
+    },
+    "risk_score": {
+      "dtype": "float64",
+      "non_numeric_count": 0
+    }
+  },
+  "cvss_range": {
+    "min": 1.9,
+    "max": 10.0,
+    "out_of_range_count": 0
+  },
+  "severity_unique": [
+    "CRITICAL",
+    "HIGH",
+    "LOW",
+    "MEDIUM"
+  ],
+  "severity_invalid": [],
+  "os_flags": {
+    "has_windows": {
+      "unique_values": [
+        0,
+        1
+      ],
+      "non_binary_count": 0
+    },
+    "has_linux": {
+      "unique_values": [
+        0,
+        1
+      ],
+      "non_binary_count": 0
+    },
+    "has_android": {
+      "unique_values": [
+        0,
+        1
+      ],
+      "non_binary_count": 0
+    }
+  },
+  "description_text_stats": {
+    "min_length": 24,
+    "median_length": 229.0,
+    "max_length": 1720,
+    "short_count_<=5": 0
+  },
+  "risk_score_stats": {
+    "min": 19.0,
+    "max": 100.0,
+    "mean": 45.75288303130148,
+    "median": 30.0,
+    "missing_count": 0
+  }
+}

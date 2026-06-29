@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "cve": "CVE-2024-12345",
+    "title": "OpenSSL TLS handshake buffer overflow fix",
+    "vendor": "OpenSSL",
+    "affected_versions": "1.1.1 - 3.0.8",
+    "fixed_in": "3.0.9",
+    "cpe_matches": ["cpe:2.3:a:openssl:openssl"],
+    "source_url": "https://www.openssl.org/news/secadv/2024-xx.html",
+    "verified": true,
+    "confidence": 0.95,
+    "apply_cmd": "sudo apt update && sudo apt install openssl=3.0.9 -y",
+    "rollback_cmd": "sudo apt install openssl=<previous_version> -y",
+    "notes": "Requires service restart after update. Backup config under /etc/ssl before upgrading."
+  },
+  {
+    "id": 2,
+    "cve": "CVE-2023-54321",
+    "title": "ExampleApp input validation hotfix",
+    "vendor": "ExampleCorp",
+    "affected_versions": "1.2.0 - 1.2.3",
+    "fixed_in": "1.2.4",
+    "cpe_matches": ["cpe:2.3:a:examplecorp:exampleapp"],
+    "source_url": "https://example.com/security/advisory-2023-54321",
+    "verified": true,
+    "confidence": 0.9,
+    "apply_cmd": "wget https://example.com/patches/exampleapp-1.2.4.tar.gz && tar -xzf exampleapp-1.2.4.tar.gz && sudo ./install.sh",
+    "rollback_cmd": "sudo systemctl stop exampleapp && sudo cp /opt/exampleapp/backup/* /opt/exampleapp/ && sudo systemctl start exampleapp",
+    "notes": "Stop service before applying; perform backup of /opt/exampleapp."
+  }
+]

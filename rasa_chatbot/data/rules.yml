@@ -1,0 +1,68 @@
+version: "3.1"
+
+rules:
+  # Greet user
+  - rule: Greet user anytime
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  # Goodbye
+  - rule: Say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  # Thank you
+  - rule: Say thanks
+    steps:
+      - intent: thanks
+      - action: utter_thanks
+
+  # Explain phishing
+  - rule: Explain phishing
+    steps:
+      - intent: ask_phishing
+      - action: utter_ask_phishing
+
+  # Explain ransomware
+  - rule: Explain ransomware
+    steps:
+      - intent: ask_ransomware
+      - action: utter_ask_ransomware
+
+  # Explain malware
+  - rule: Explain malware
+    steps:
+      - intent: ask_malware
+      - action: utter_ask_malware
+
+  # Explain ddos
+  - rule: Explain ddos
+    steps:
+      - intent: ask_ddos
+      - action: utter_ask_ddos
+
+  # Explain password safety
+  - rule: Explain password safety
+    steps:
+      - intent: ask_password_safety
+      - action: utter_ask_password_safety
+
+  # Explain cybercrime reporting
+  - rule: Explain cybercrime reporting
+    steps:
+      - intent: ask_cybercrime_reporting
+      - action: utter_ask_cybercrime_reporting
+
+  # Fallback to Gemini for unknown or untrained queries
+  - rule: Use ChatGPT (Gemini) fallback
+    steps:
+      - intent: nlu_fallback
+      - action: action_chatgpt_fallback
+
+  # Respond to ShieldPatch project question
+  - rule: respond to ask_shieldpatch
+    steps:
+      - intent: ask_shieldpatch
+      - action: utter_ask_shieldpatch
